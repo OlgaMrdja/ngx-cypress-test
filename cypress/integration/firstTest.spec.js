@@ -9,6 +9,8 @@ describe('our first suite', () => {
         cy.contains('Forms').click()
         cy.contains('Form Layouts').click()
 
+     //Types of locators:
+      
         cy.get('input')
 
         cy.get('#inputEmail1')
@@ -278,11 +280,13 @@ describe('our first suite', () => {
 
 describe('My first suite', () => {
 
+  //in this test, I wrote my own examples for some of the codes from 'Our first suite':
+  
     it('find button', () => {
         cy.visit('/')
         cy.contains('Forms').click()
         cy.contains('Form Layouts').click()
-
+      
         cy.contains('nb-card', 'Block form',).find('button').should('contain', 'Submit')
     })
 
@@ -290,7 +294,6 @@ describe('My first suite', () => {
         cy.visit('/')
         cy.contains('Forms').click()
         cy.contains('Form Layouts').click()
-
 
         cy.contains('nb-card', 'Block form').then(form => {
             const firstNameLabel = form.find('[for="inputFirstName"]').text()
